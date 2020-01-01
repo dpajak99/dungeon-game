@@ -1,0 +1,402 @@
+@font-face {
+  font-family: font1;
+  font-size: 11px;
+  src: url(../img/font1.ttf);
+}
+
+body {
+	background-image: url("../img/background.jpg");
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: 100% 100%;
+	color: white;
+	text-align: center;
+	padding: 50px;
+}
+
+button {
+	cursor: pointer;
+	outline: none;
+}
+
+table#map {
+	background-color: gray;
+	padding: 1px;
+	border: solid 1px black;
+	margin: 0 auto;
+}
+
+table#szerokosci {
+	margin: 0 auto;
+	padding: 30px;
+	font-size: 12px;
+	font-family: font1;
+	text-align: center;
+	vertical-align: middle;
+}
+
+div#szerokosci {
+	background-image: url("../img/background2.png");
+	background-repeat: no-repeat;
+	background-size:  100% 100% ;
+	color: black;
+	width: 400px;
+	margin: 0 auto;
+}
+
+div#gotowe_mapy {
+	position: fixed;
+	top: 70px;
+	left: 30px;
+}
+
+div#WygenerowanaArea, div#alert {
+	position: fixed;
+	top: 0px;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+	background-color: rgba( 0, 0, 0, 0.95);
+	display: none;
+	z-index: 5;
+}
+
+div#Wygenerowana {
+	margin: 0 auto;
+	width: 500px;
+	height: 500px;
+	background-image: url("../img/mapico.png");
+	background-repeat: no-repeat;
+	margin-top: 20px;
+	padding-top: 60px;
+	font-family: font1;
+	word-spacing: 10px;
+	font-size: 10px;
+	color: black;
+}
+
+div#alert_info {
+	margin: 0 auto;
+	width: 500px;
+	height: 500px;
+	background-image: url("../img/mapico.png");
+	background-repeat: no-repeat;
+	margin-top: 20px;
+	padding: 20px;
+	padding-top: 190px;
+	font-family: font1;
+	word-spacing: 10px;
+	font-size: 18px;
+	color: black;
+}
+
+div#mapeczkaArea {
+	background-image: url("../img/background2.png");
+	background-repeat: no-repeat;
+	background-size:  100% 100% ;
+	padding: 60px;
+	margin: 0 auto;
+}
+
+button#buttonGeneruj {
+	font-family: font1;
+	box-shadow: inset 0px 0px 1px;
+	padding: 5px;
+	padding-top: 10px;
+}
+
+button#button_start, button#button_end {
+	font-family: font1;
+	box-shadow: inset 0px 0px 1px;
+	font-size: 11px;
+	padding: 5px;
+	padding-top: 9px;
+	padding-left: 10px;
+	padding-right: 10px;
+	margin: 10px;
+}
+
+button#buttonGeneruj:active, button#button_start:active, button#button_end:active, button#RozpocznijGre:active, button.mapico:active {
+	box-shadow: inset 2px 2px 10px;
+}
+
+button#RozpocznijGre, button#backmenu {
+	font-family: font1;
+	padding-top: 9px;
+	padding-left: 45px;
+	background-image: url("../img/startICO.png");
+	background-repeat: no-repeat;
+	background-size:  35px 30px;
+	background-position: 2px 2px;
+}
+
+button.mapico {
+	background-image: url("../img/mapico.png");
+	background-color: rgba(0, 0, 0, 0);
+	border: 0px;
+	font-family: font1;
+	background-repeat: no-repeat;
+	background-size:  100% 100%;
+	width: 80px;
+	height: 80px;
+	color: #800000;
+}
+
+button.mapico:hover {
+	text-decoration: underline;
+}
+
+td.mapGenerator {
+	width: 30px;
+	height: 30px;
+	background-color: black;
+	color: white;
+	text-align: center;
+}
+
+button.class_addWall {
+	width: 100%;
+	height: 100%;
+	background-color: white;
+	color: black;
+	border: none;
+}
+
+button.class_deleteWall {
+	width: 100%;
+	height: 100%;
+	background-color: black;
+	color: white;
+	border: none;
+}
+
+button.class_addWall2 {
+	width: 100%;
+	height: 100%;
+	background-color: white;
+	color: black;
+}
+
+button.class_deleteWall2 {
+	width: 100%;
+	height: 100%;
+	background-color: black;
+	color: white;
+}
+
+button.class_addWall2:hover {
+	background-color: yellow;
+}
+
+button.class_deleteWall2:hover {
+	background-color: yellow;
+}
+
+button.class_startWall {
+	width: 100%;
+	height: 100%;
+	background-color: red;
+	color: white;
+}
+
+button.class_endWall {
+	width: 100%;
+	height: 100%;
+	background-color: purple;
+	color: white;
+}
+
+input#SelectMapHeight, input#SelectMapWidth {
+	width: 30px;
+	height: 15px;
+	background-repeat: no-repeat;
+	background-position: 0 0;
+	background-size: 35%;
+	padding-left: 20px;
+	padding-top: 5px;
+	font-family: font1;
+	font-size: 14px;
+}
+
+input#SelectMapHeight {
+	background-image: url('../img/arrows_vertical.png');
+}
+
+input#SelectMapWidth {
+	background-image: url('../img/arrows_horizontal.png');
+}
+
+div#game {
+	background-color: black;
+	background-image: url('../img/background.jpg');
+	background-size: 120% 120%;
+	background-position: -140px -60px;
+	display: none;
+	position: fixed;
+	top: 0px;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+	z-index: 1;
+}
+
+div#shadow_minimapa {
+	z-index: 1;
+	position: absolute;
+}
+
+div#minimapa {
+	z-index: 0;
+	position: absolute;
+}
+
+div#gra {
+	width: 1050px;
+	height: 650px;
+	margin: 0 auto;
+	background-image: url("../img/panel.jpg");
+	background-size: 100% auto;
+	background-repeat: no-repeat;
+	text-align: center;
+	border: solid 5px black;
+}
+
+div#ekran_gry_all {
+	margin: 0 auto;
+	z-index: 2;
+}
+
+div#all_minimapa {
+	display: inline;
+}
+
+div#ekran_gry {
+	margin: 0 auto;
+	position: absolute;
+	margin-left: 290px;
+	margin-top: 56px;
+	width: 400px;
+	height: 400px;
+	z-index: 6;
+	border: solid 6px black;
+}
+
+div#ekran_gry2 {
+	margin: 0 auto;
+	display: inline;
+	float: left;
+	
+	margin-left: 393px;
+	margin-top: 162px;
+	width: 210px;
+	height: 210px;
+	z-index:  5;
+}
+
+div#konsola {
+	display: inline;
+	float: left;
+	text-align: left;
+	padding: 8px;
+	/*background-color: green;*/
+	margin-left: 163px;
+	margin-top: 63px;
+	width: 235px;
+	height: 374px;
+	overflow-x: auto;
+	color: white;
+}
+
+.imggme {
+	width: 400px;
+	height: 400px;
+}
+
+.imggme2 {
+	width: 210px;
+	height: 210px;
+}
+
+table#minimap, table#minimap_shadow {
+	border-spacing: 0mm;
+	margin-top: 303px;
+	margin-left: 60px;
+	width: 150px;
+	height: 150px;
+	border: 6px solid black;
+}
+
+td.game_area_wall, td.game_area_free, td.game_area_start, td.game_area_end, td.td_shadow, td.game_area_shadownear1, td.game_area_shadownear2 {
+
+	margin: 0px;
+}
+
+td.game_area_wall {
+	background-color: black;
+}
+
+td.game_area_free {
+	background-color: rgb(128, 183, 123)
+}
+
+td.game_area_start {
+	background-color: red;
+}
+
+td.game_area_start_a_top, td.game_area_start_a_bottom {
+	background-color: red;
+	background-repeat: no-repeat;
+	background-size: 97%;
+	background-position: 1px 2px;
+}
+
+td.game_area_start_a_right, td.game_area_start_a_left {
+	background-color: red;
+	background-repeat: no-repeat;
+	background-size: auto 97%;
+	background-position: 2px 1px;
+}
+
+td.game_area_start_a_top {
+	background-image: url('../img/a_top.png');
+}
+
+td.game_area_start_a_bottom {
+	background-image: url('../img/a_bottom.png');
+}
+
+td.game_area_start_a_right {
+	background-image: url('../img/a_right.png');
+}
+
+td.game_area_start_a_left {
+	background-image: url('../img/a_left.png');
+}
+
+td.game_area_end {
+	background-color: purple;
+}
+
+.game_area_a_top {
+	background-color: yellow;
+}
+
+td.td_shadow {
+	background-color: rgba(128,128,128, 1);
+}
+
+.game_area_shadownear1 {
+	background-color: rgba(128,128,128, 0);
+}
+
+.game_area_shadownear2 {
+	background-color: rgba(128,128,128, 0);
+}
+
+.disactive {
+	background-color: brown;
+}
+
+.active {
+	background-color: green;
+}

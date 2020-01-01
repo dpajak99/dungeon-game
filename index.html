@@ -1,0 +1,82 @@
+﻿<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>DungeonGame v1.0</title>
+		<meta charset="UTF-8" />
+		<link rel="stylesheet" type="text/css" href="style/main.css" />
+	</head>
+	<body>
+		<img src="img/logo.png" width="55%"/>
+		<center style="font-size: 20px; font-family: font1;"><b>(min 6; max 20)</b></center>
+		<div id="szerokosci">
+			<table id="szerokosci">
+				<tr>
+					<td><b>Podaj szerokość mapy:</b></td><td>&nbsp;&nbsp;<input type="text" onkeyup="this.value=this.value.replace(/\D/g,'')" maxlength="2" value="10" id="SelectMapWidth"></td>
+				</tr>
+				<tr>
+					<td><b>Podaj wysokość mapy:</b> </td><td>&nbsp;&nbsp;<input type="text" onkeyup="this.value=this.value.replace(/\D/g,'')" maxlength="2" value="10" id="SelectMapHeight"></td>
+				</tr>
+			</table>
+		</div>
+		<button onClick="MapaGeneruj()" id="buttonGeneruj" >Wygeneruj mapę</button><br /><br />
+		
+		<div id="mapeczkaArea">
+			<table id="map"></table><br /><br />
+		</div>
+		<button onClick="wall.start()" id="button_start" class="disactive">Wybierz miejsce startu</button><button id="button_end" onClick="wall.end()" class="disactive">Wybierz miejsce mety</button>
+		
+		<div id="gotowe_mapy">
+			<button onClick="poziom1()" class="mapico">Mapa 1</button><br /><br />
+			<button onClick="poziom2()" class="mapico">Mapa 2</button><br /><br />
+			<button onClick="poziom3()" class="mapico">Mapa 3</button><br /><br />
+			<button onClick="poziom4()" class="mapico">Mapa 4</button><br /><br />
+			<button onClick="poziom5()" class="mapico">Mapa 5</button><br /><br />
+		</div><br /><br />
+		
+		<button onClick="play()" id="RozpocznijGre">Graj</button><br /><br />
+		<button onClick="licz()">Wygeneruj (admin)<br /> Ogólnie to display: none; jak coś.<br /> Taki tam przycisk do generowania kodu do sejwów mapy.</button>
+		
+		<div id="game">
+		<img src="img/logo.png" width="30%" style="position: fixed; top 20px; left: 20px;">
+			<div id="gra">
+				<br />
+				<div id="ekran_gry_all">
+					<div id="ekran_gry2">
+					
+					</div>
+					<div id="ekran_gry">
+						
+					</div>
+					
+					<div id="all_minimapa">
+						<div id ="shadow_minimapa">
+							<table id="minimap_shadow"></table>
+						</div>
+						<div id="minimapa">
+							<table id="minimap"></table>
+						</div>
+					</div>
+					<div id="konsola">
+					
+					</div>
+				</div>
+				
+			</div>
+		</div>
+		
+		<div id="WygenerowanaArea">
+			<div id="Wygenerowana" id="Wygenerowana"></div>
+			<button onClick="backmenu()" id="backmenu">Wróć</button><br /><br />
+		</div>
+		
+		<div id="alert">
+			<div id="alert_info" id="Wygenerowana"></div>
+		</div>
+		
+		<div id="console" style="position: absolute; width:300px; height: 300px; top: 0px; right: 0px; background-color: gray; display: none;"></div>
+		<br /><br /><br /><br />
+		<center style="font-size: 10px; font-family: font1;">Gra stworzona przez Dominika Pająk, ucznia klasy 3ib</b></center>
+	<script type="text/javascript" src="scripts/map_generator.js"></script>
+	<script type="text/javascript" src="scripts/game.js"></script>
+	</body>
+</html>
