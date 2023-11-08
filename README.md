@@ -2,7 +2,7 @@
 ![Showcase](./assets/video.gif)
 
 ## Description
-This repository contains a Dungeon Game game created as a school project in 2018. It's a simple implementation of the classic dungeon exploration game where user has to find specific point on the map.
+This repository contains a Dungeon Game game created as a school project in 2017. It's a simple implementation of the classic dungeon exploration game where user has to find specific point on the map.
 
 ## Technologies
 This project was developed using HTML, CSS, JS.
