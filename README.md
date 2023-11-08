@@ -1,6 +1,15 @@
-# Dungeon-Game (2017)
-Projekt szkolny z 2017
+# 👶🏽 Dungeon Game - School Project (2017)
+![Showcase](./assets/video.gif)
 
-Projekt stworzony na zajęcia związane z JavaScriptem
+## Description
+This repository contains a Dungeon Game game created as a school project in 2018. It's a simple implementation of the classic dungeon exploration game where user has to find specific point on the map.
 
-Youtube: https://youtu.be/8EvMDA0gGJw
+## Technologies
+This project was developed using HTML, CSS, JS.
+
+## Purpose of Publication
+This codebase is published as a memento of my early days in programming. It's a snapshot of my learning journey and showcases the progress I've made since this initial foray into coding.
+
+---
+
+*This project is a documentation of my beginnings in the coding world and is published solely for archival purposes.*
